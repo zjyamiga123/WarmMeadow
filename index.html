@@ -1,0 +1,91 @@
+<DOCTYPE html>
+<html> <!-- things between tags are called elememts.-->
+    <head>
+        <title> Warm Meadow </title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <!--This is where bootstrap will be-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="style.css" rel= "stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>WARM MEADOW</h1>
+  
+         <b><p>Website developer and program organzier : Jingyu Zhang </p></b>
+         <b><p>Contact me to build your team and start the tour: jingyuzhang2022@gmail.com  ; TEL: 931-636-6609</p></b>
+        <h2>Warm Meadow Outdoor Adventure</h2>
+        <b><p>Warm Meadow offers nature trips and all kinds of outdoor activities with
+              professional trainers and tour guides</p></b>
+            <br>
+         <img src="trip.jpg" alt="Hiking in the national park" width="550" height="380">
+           <br>
+        <a href="">Hiking trip</a>
+        <br> <br> <br>
+        <h3>Warm Meadow Scientific Outreach Program</h3>
+        <b><p>Warm Meadow also serves as a science classroom during the nature trips, 
+            animal observations and field science.</p></b>
+            <br>
+         <img src="field.jpg" alt="Biology field trip" width="280" height="380">
+           <br>
+           <a href="">Field biology trip</a>
+           <br>
+           <p>Here's a video of turtle conservation trip! Look at how cute the turtles are!</p>
+           <div class="video">
+            <!-- We will add the scripts in order to get the video
+             to play when we hit watch me, or hide the video when we hit Hide-->
+
+            <button type="button" onclick="showVideo"> Watch Me</button>
+            <button type="button" onclick="hide">Show Less</button>
+            <br><br>
+            <!-- The video is here. -->
+            <iframe width="300" height="305"
+                src="turtle.mp4">
+            </iframe> 
+
+          </div>
+          <br><br>
+          <div id="location"> 
+              <button onclick="getLocation()">You are here!</button>
+          </div>
+           <script>
+                  var x = document.getElementById("location");
+                  function getLocation() {
+                  if (navigator.geolocation) {
+                      navigator.geolocation.getCurrentPosition(showPosition);
+                  } else {
+                      x.innerHTML = "Geolocation is not supported by this browser.";
+                  }
+                  }
+  
+                  function showPosition(position) {
+                  x.innerHTML = "Latitude: " + position.coords.latitude +
+                  "<br>Longitude: " + position.coords.longitude; 
+                  }
+          </script>
+
+<p id = "demo"> </p>
+<button type="button"
+onclick= "document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="demo2">What to do next?</p>
+
+<button type="button" onclick= "myFunction()"> Click me to show answer </button>
+</p> 
+
+    
+<script>
+function myFunction() { 
+    v = document.getElementById("demo2");
+    v.insertAdjacentHTML("afterend", "<p> Start your Warm Meadow journey today : 931-636-6609</p>"); 
+}
+</script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+    </body>
+</html>
